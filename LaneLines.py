@@ -172,17 +172,21 @@ class LaneLines:
         #print(type(self.left_fit),type(self.right_fit))
         left_fitx = self.left_fit[0] * ploty ** 2 + self.left_fit[1] * ploty + self.left_fit[2]
         right_fitx = self.right_fit[0] * ploty ** 2 + self.right_fit[1] * ploty + self.right_fit[2]
-
+        out_img1= np.copy(out_img)
         # Visualization
         for i, y in enumerate(ploty):
             l = int(left_fitx[i])
             r = int(right_fitx[i])
             y = int(y)
             cv2.line(out_img, (l, y), (r, y), (0, 255, 0))
+            cv2.line(out_img, (r, y), (r, y), (255, 0, 0),10)
+            cv2.line(out_img, (l, y), (l, y), (255, 0, 0),10)
+            cv2.line(out_img1, (r, y), (r, y), (255, 0, 0),5)
+            cv2.line(out_img1, (l, y), (l, y), (255, 0, 0),5)
 
         lR, rR, pos = self.measure_curvature()
 
-        return out_img
+        return out_img, out_img1
 
     def plot(self, out_img):
         np.set_printoptions(precision=6, suppress=True)

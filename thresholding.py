@@ -37,5 +37,5 @@ def get_lanes(img):
     left_lane[:, 550:] = 0
     left_lane[:350, :] = 0
     img3 = left_lane | right_lane
-    return img3
+    return img3, right_lane, left_lane
     
