@@ -15,7 +15,7 @@
 if the dubug <-d> is 0 then that's mean the output video will be in the format:
 	![non-debugging mode](pic/img2.jpeg)
 if the dubug <-d> is 1 then that's mean the output video will be in the format:
-	![debugging mode](img1.jpeg)
+	![debugging mode](pic/img1.jpeg)
 	
 	
 # Dependencies and how to install it:
