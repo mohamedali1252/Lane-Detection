@@ -102,26 +102,8 @@ class LaneLines:
 
         return out_img, out_img1
 
-    def plot(self, out_img):
-        np.set_printoptions(precision=6, suppress=True)
+        def plot(self, out_img):
         lR, rR, pos = self.measure_curvature()
-
-        value = None
-        if abs(self.left_fit[0]) > abs(self.right_fit[0]):
-            value = self.left_fit[0]
-        else:
-            value = self.right_fit[0]
-
-        if abs(value) <= 0.00015:
-            self.dir.append('F')
-        elif value < 0:
-            self.dir.append('L')
-        else:
-            self.dir.append('R')
-
-        if len(self.dir) > 10:
-            self.dir.pop(0)
-
         W = 400
         H = 300
         widget = np.copy(out_img[:H, :W])
@@ -131,12 +113,8 @@ class LaneLines:
         widget[:, 0] = [0, 0, 255]
         widget[:, -1] = [0, 0, 255]
         out_img[:H, :W] = widget
-
-        direction = max(set(self.dir), key=self.dir.count)
         curvature_msg = "Curvature = {:.0f} m".format(min(lR, rR))
-
-        if direction in 'LR':
-            cv2.putText(out_img, curvature_msg, org=(10, 100), fontFace=cv2.FONT_HERSHEY_SIMPLEX, fontScale=1,
+        cv2.putText(out_img, curvature_msg, org=(10, 100), fontFace=cv2.FONT_HERSHEY_SIMPLEX, fontScale=1,
                         color=(255, 255, 255), thickness=2)
 
         cv2.putText(
