@@ -33,13 +33,13 @@
 
 # Pipeline of the code:  
 
-1. Thresholding:
-![Thresholding](pic/thresh.png)
-2. Prespective Transform:
-![Prespective-Transform](pic/PrespectiveTransform.png)
-3. Lanes Detection:
-![Lanes-Detection](pic/LanesDetection.png)
-4. Return to Actual Scale:
-![Return](pic/ret.png)
-5. Add lane marks to actual image:
-![Adding](pic/adding.png)
+1. Thresholding:  
+![Thresholding](pic/thresh.png)  
+2. Prespective Transform:  
+![Prespective-Transform](pic/PrespectiveTransform.png)  
+3. Lanes Detection:  
+![Lanes-Detection](pic/LanesDetection.png)  
+4. Return to Actual Scale:  
+![Return](pic/ret.png)  
+5. Add lane marks to actual image:  
+![Adding](pic/adding.png)  
