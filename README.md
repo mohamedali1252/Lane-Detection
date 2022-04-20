@@ -46,9 +46,5 @@
 	![Return](pic/ret.png)
 	
 5. Add lane marks to actual image:
-	![Adding](pic/add.png)
+	![Adding](pic/adding.png)
 	
-6. Debug Mode:
-	![Debug-Mode](pic/DebugMode.png)
-	
-7. Process on video
