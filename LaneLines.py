@@ -1,6 +1,4 @@
-import cv2
-import numpy as np
-
+from thresholding import cv2, np
 
 def hist(img):
     bottom_half = img[img.shape[0] // 2:, :]

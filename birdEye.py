@@ -1,6 +1,4 @@
-import cv2
-import numpy as np
-
+from thresholding import cv2, np
 
 def perspective_transform():
     src = np.float32([(550, 460),  # top-left
