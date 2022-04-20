@@ -102,7 +102,7 @@ class LaneLines:
 
         return out_img, out_img1
 
-        def plot(self, out_img):
+    def plot(self, out_img):
         lR, rR, pos = self.measure_curvature()
         W = 400
         H = 300
