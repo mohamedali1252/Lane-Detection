@@ -12,10 +12,10 @@
 
 # Debug mode:
 
-if the dubug <-d> is 0 then that's mean the output video will be in the format:
+1. if the dubug <-d> is 0 then that's mean the output video will be in the format:
 	![non-debugging mode](pic/img2.jpeg)
-if the dubug <-d> is 1 then that's mean the output video will be in the format:
-	![debugging mode](img1.jpeg)
+2. if the dubug <-d> is 1 then that's mean the output video will be in the format:
+	![debugging mode](pic/img1.jpeg)
 	
 	
 # Dependencies and how to install it:
@@ -34,21 +34,21 @@ if the dubug <-d> is 1 then that's mean the output video will be in the format:
 # Pipeline of the code:  
 
 1. Thresholding:
-	![non-debugging mode](pic/thresh.png)
+	![Thresholding](pic/thresh.png)
 		
 2. Prespective Transform:
-	![non-debugging mode](pic/PrespectiveTransform.png)
+	![Prespective-Transform](pic/PrespectiveTransform.png)
 	
 3. Lanes Detection:
-	![non-debugging mode](pic/LanesDetection.png)
+	![Lanes-Detection](pic/LanesDetection.png)
 	
 4. Return to Actual Scale:
-	![non-debugging mode](pic/ret.png)
+	![Return](pic/ret.png)
 	
 5. Add lane marks to actual image:
-	![non-debugging mode](pic/add.png)
+	![Adding](pic/add.png)
 	
 6. Debug Mode:
-	![non-debugging mode](pic/DebugMode.png)
+	![Debug-Mode](pic/DebugMode.png)
 	
 7. Process on video
